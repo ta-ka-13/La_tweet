@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// /というURLにリクエスト(ブラウザなどからのアクセス)があったら、ArticleControllerのindexアクションメソッドを動かす、ということが定義されます。
+Route::get('/', 'ArticleController@index');
