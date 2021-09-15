@@ -3,6 +3,10 @@
 @section('title', '記事一覧')
 
 @section('content')
+
+  <!-- 別のビューを読み込ます -->
+  @include('nav')
+  
   <div class="container">
     <div class="card mt-3">
       <div class="card-body d-flex flex-row">
