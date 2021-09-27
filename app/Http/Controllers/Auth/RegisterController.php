@@ -21,7 +21,8 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
+    
+// このクラス内で useトレイト名と記述することでトレイトを使える
     use RegistersUsers;
 
     /**
