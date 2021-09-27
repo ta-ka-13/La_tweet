@@ -15,5 +15,8 @@
 //     return view('welcome');
 // });
 
+// 追加
+Auth::routes();
+
 // /というURLにリクエスト(ブラウザなどからのアクセス)があったら、ArticleControllerのindexアクションメソッドを動かす、ということが定義されます。
 Route::get('/', 'ArticleController@index');
