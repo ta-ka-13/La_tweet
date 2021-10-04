@@ -19,4 +19,7 @@
 Auth::routes();
 
 // /というURLにリクエスト(ブラウザなどからのアクセス)があったら、ArticleControllerのindexアクションメソッドを動かす、ということが定義されます。
-Route::get('/', 'ArticleController@index');
+Route::get('/', 'ArticleController@index')->name('articles.index');
+
+// よく使われる機能のルーティングをひとまとめにしたメソッド
+Route::resource('/articles', 'ArticleController')->except(['index']);
