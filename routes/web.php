@@ -22,4 +22,4 @@ Auth::routes();
 Route::get('/', 'ArticleController@index')->name('articles.index');
 
 // よく使われる機能のルーティングをひとまとめにしたメソッド
-Route::resource('/articles', 'ArticleController')->except(['index']);
+Route::resource('/articles', 'ArticleController')->except(['index'])->middleware('auth');
