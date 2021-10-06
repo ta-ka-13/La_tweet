@@ -13,7 +13,7 @@ class ArticleRequest extends FormRequest
      */
     public function authorize()
     {
-        return transliterator_create_from_rules;
+        return true;
     }
 
     /**
