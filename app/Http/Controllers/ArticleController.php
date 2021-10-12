@@ -37,9 +37,11 @@ class ArticleController extends Controller
     }
 
     // editアクション
+    // $articleにはArticleモデルのインスタンスが代入された状態
     public function edit(Article $article)
     {
-        return view('articles.edit', ['article' => $article]);    
+        // $articleという変数にArticleモデルのインスタンスが代入された状態
+        return view('articles.edit', ['article' => $article]);
     }
 }
 
