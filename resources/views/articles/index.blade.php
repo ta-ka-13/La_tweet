@@ -21,6 +21,7 @@
           </div>
         </div>
 
+        <!-- 認証済ユーザーのみ表示するようにしている@if~@endif -->
         @if( Auth::id() === $article->user_id )
           <!-- dropdown -->
           <div class="ml-auto card-text">
