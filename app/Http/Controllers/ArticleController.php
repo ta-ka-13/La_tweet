@@ -43,6 +43,15 @@ class ArticleController extends Controller
         // $articleという変数にArticleモデルのインスタンスが代入された状態
         return view('articles.edit', ['article' => $article]);
     }
+
+    // updateアクション
+    public function update(ArticleRequest $request, Article $article)
+    {
+        // user_idは更新しないので$article->user_id = $request->user()->idは行わない事に注意
+        $article->fill($request->all())->save();
+        return redirect()->route('articles.index');
+    }
+
 }
 
 
