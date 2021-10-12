@@ -1,6 +1,7 @@
 @csrf
 <div class="md-form">
   <label>タイトル</label>
+  <!-- ??はNull合体演算子 (式1 ?? 式2) 式1がnullでない場合は、式1が結果、式1がnullである場合は、式2が結果 -->
   <input type="text" name="title" class="form-control" required value="{{$article->title ?? old('title') }}">
 </div>
 <div class="form-group">
