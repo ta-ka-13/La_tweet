@@ -35,6 +35,12 @@ class ArticleController extends Controller
         $article->save();
         return redirect()->route('articles.index');
     }
+
+    // editアクション
+    public function edit(Article $article)
+    {
+        return view('articles.edit', ['article' => $article]);    
+    }
 }
 
 
