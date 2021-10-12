@@ -35,6 +35,14 @@ class ArticleController extends Controller
         $article->save();
         return redirect()->route('articles.index');
     }
+
+    // editアクション
+    // $articleにはArticleモデルのインスタンスが代入された状態
+    public function edit(Article $article)
+    {
+        // $articleという変数にArticleモデルのインスタンスが代入された状態
+        return view('articles.edit', ['article' => $article]);
+    }
 }
 
 
