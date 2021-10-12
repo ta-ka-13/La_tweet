@@ -23,3 +23,6 @@ Route::get('/', 'ArticleController@index')->name('articles.index');
 
 // よく使われる機能のルーティングをひとまとめにしたメソッド
 Route::resource('/articles', 'ArticleController')->except(['index','show'])->middleware('auth');
+
+// showアクションメソッドに対してauthミドルウェアを使わないようにしている
+Route::resource('/articles', 'ArticleController')->only(['show']);
