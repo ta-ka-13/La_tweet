@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
 
+    // ポリシー使用
+    public function __construct()
+    {
+        $this->authorizeResource(Article::class, 'article');
+    }
+
     public function index()
     {
     // 追加
