@@ -18,7 +18,8 @@ class ArticlePolicy
      */
     public function viewAny(User $user)
     {
-        //
+        // 他ユーザーが書いた記事を一覧画面や詳細画面で見れる
+        return true;
     }
 
     /**
@@ -30,7 +31,7 @@ class ArticlePolicy
      */
     public function view(User $user, Article $article)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +42,7 @@ class ArticlePolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +54,8 @@ class ArticlePolicy
      */
     public function update(User $user, Article $article)
     {
-        //
+        // ログイン中のユーザーのIDと記事モデルのユーザーIDが一致すればtrueを、不一致であればfalseを返す
+        return $user->id === $article->user_id;
     }
 
     /**
@@ -65,7 +67,8 @@ class ArticlePolicy
      */
     public function delete(User $user, Article $article)
     {
-        //
+        // ログイン中のユーザーのIDと記事モデルのユーザーIDが一致すればtrueを、不一致であればfalseを返す
+        return $user->id === $article->user_id;
     }
 
     /**
