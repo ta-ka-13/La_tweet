@@ -16,7 +16,7 @@ class ArticlePolicy
      * @param  \App\User  $user
      * @return mixed
      */
-    public function viewAny(User $user)
+    public function viewAny(?User $user)
     {
         // 他ユーザーが書いた記事を一覧画面や詳細画面で見れる
         return true;
@@ -29,7 +29,7 @@ class ArticlePolicy
      * @param  \App\Article  $article
      * @return mixed
      */
-    public function view(User $user, Article $article)
+    public function view(?User $user, Article $article)
     {
         return true;
     }
