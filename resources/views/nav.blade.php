@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-dark blue-gradient">
+<nav class="navbar navbar-expand navbar-light" style="background-color:#ffd700;">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>memo</a>
+  <a class="navbar-brand" href="/"><i class=""></i>麺つい〜と</a>
 
   <ul class="navbar-nav ml-auto">
 
@@ -19,7 +19,7 @@
 
     @auth
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
+      <a class="btn btn-sm nav-link" href="{{ route('articles.create') }}"><i class=""></i>着丼</a>
     </li>
     @endauth
     
