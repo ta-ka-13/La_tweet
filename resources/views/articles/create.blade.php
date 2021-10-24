@@ -14,7 +14,15 @@
             <div class="card-text">
               <form method="POST" action="{{ route('articles.store') }}">
                 @include('articles.form')
-                <button type="submit" class="btn blue-gradient btn-block">投稿する</button>
+                <!-- <input id="image" type="file" name="image" > -->
+                <div class="form-group">
+                  <label for="inputFile">写真</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputFile">
+                  <label class="custom-file-label" for="inputFile" data-browse="参照">写真を選択</label>
+                </div>
+                
+                <button type="submit" class="btn "style="background-color:#FADD10;" btn-block>投稿する</button>
               </form>
             </div>
           </div>

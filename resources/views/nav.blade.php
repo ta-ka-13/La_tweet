@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-light" style="background-color:#ffd700;">
+<nav class="navbar navbar-expand navbar-light fixed-top" style="background-color:#FADD10;">
 
-  <a class="navbar-brand" href="/"><i class=""></i>麺つい〜と</a>
+  <a class="navbar-brand" style="color:#000000;" href="/"><i class=""></i>麺レビュー.com</a>
 
   <ul class="navbar-nav ml-auto">
 
@@ -19,7 +19,7 @@
 
     @auth
     <li class="nav-item">
-      <a class="btn btn-sm nav-link" href="{{ route('articles.create') }}"><i class=""></i>着丼</a>
+      <a class="btn btn-sm rounded-circle p-1.1 nav-link " href="{{ route('articles.create') }}"><i class=""></i>着丼</a>
     </li>
     @endauth
     
