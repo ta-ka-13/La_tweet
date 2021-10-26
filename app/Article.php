@@ -34,5 +34,17 @@ class Article extends Model
         return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
 
+    // 引数$userの型が、Userモデルであることを宣言している
+    // ?を付けると、その引数がnullであることも許容している
+    public function isLikedBy(?User $user): bool
+    {
+
+        return $user
+        // $userがnullでなければ、結果をメソッドの呼び出し元に返す
+            ? (bool)$this->likes->where('id', $user->id)->count()
+            // $userがnullであれば、falseを返す
+            : false;
+    }
+
     //
 }
