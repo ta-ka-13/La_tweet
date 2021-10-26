@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 // 追加
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
 class Article extends Model
 {
 // 追加
@@ -22,6 +25,13 @@ class Article extends Model
         // $this->メソッド名()とすることで、インスタンスが持つメソッドが実行され、
         // $this->プロパティ名とすることで、インスタンスが持つプロパティを参照します。
         return $this->belongsTo('App\User');
+    }
+
+
+    public function likes(): BelongsToMany
+    {
+        // いいねにおいてarticleモデルとuserモデルは多対多の関係
+        return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
 
     //
