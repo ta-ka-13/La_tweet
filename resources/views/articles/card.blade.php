@@ -64,10 +64,10 @@
     </div>
   </div>
   
-  <div class="card-body pt-2 pb-2 pl-3">
+  <div class="card-body pt-0 pb-2 pl-3">
     <div class="card-text">
       <article-like>
-        【ここにいいねアイコンが付く】
+        <!-- 【ここにいいねアイコンが付く】 -->
       </article-like>
     </div>
   </div>
