@@ -66,8 +66,9 @@
   
   <div class="card-body pt-0 pb-2 pl-3">
     <div class="card-text">
-      <article-like>
-        <!-- 【ここにいいねアイコンが付く】 -->
+
+    <!-- @jsonを使うことで、$article->isLikedBy Auth::userの結果を値ではなく文字列としてVueコンポーネントに渡している -->
+      <article-like :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'>
       </article-like>
     </div>
   </div>
