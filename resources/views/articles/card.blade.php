@@ -67,7 +67,7 @@
   <div class="card-body pt-0 pb-2 pl-3">
     <div class="card-text">
 
-    <!-- @jsonを使うことで、$article->isLikedBy Auth::userの結果を値ではなく文字列としてVueコンポーネントに渡している -->
+    <!-- initial-is-liked-byに渡した値は、プロパティinitialIsLikedByに渡される -->
       <article-like :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'>
       </article-like>
     </div>
