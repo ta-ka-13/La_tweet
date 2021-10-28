@@ -46,5 +46,12 @@ class Article extends Model
             : false;
     }
 
-    //
+    public function getCountLikesAttribute(): int
+    {
+        // $this->likesにより、記事モデルからlikesテーブル経由で紐付いているユーザーモデルが、コレクション(配列を拡張したもの)で返る
+        // countメソッドを使ってコレクションの要素数を数える
+        return $this->likes->count();
+
+    }
+
 }
