@@ -8,7 +8,7 @@
       :class="{'red-text':this.isLikedBy}"
       />
     </button>
-    10
+    {{count_Liles}}
   </div>
 </template>
 
@@ -21,11 +21,17 @@ export default {
         type: Boolean,
         default: false,
       },
+
+      initialCountLikes: {
+        type: Number,
+        default: 0,
+      },
     },
     data() {
       return {
         // プロパティinitialIsLikedByの値をそのままデータisLikedByにセットしている
         isLikedBy: this.initialIsLikedBy,
+        countLikes: this.initialCountLikes,
       }
     },
   }
