@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-light fixed-top" style="background-color:#FADD10;">
 
-  <a class="navbar-brand" style="color:#000000;" href="/"><i class=""></i>麺の感想.com</a>
+  <a class="navbar-brand" style="color:#000000;" href="/"><i class=""></i>麺インプレッション.com</a>
 
   <ul class="navbar-nav ml-auto">
 

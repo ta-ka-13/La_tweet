@@ -18,7 +18,7 @@
               <!-- Bladeで@method('PATCH')と記述するとBladeから生成されたHTMLではinputタグが埋め込まれる -->
                 @method('PATCH')
                 @include('articles.form')
-                <button type="submit" class="btn blue-gradient btn-block">更新する</button>
+                <button type="submit" class="btn btn-block" style="background-color:#FADD10;" >更新する</button>
               </form>
             </div>
           </div>
