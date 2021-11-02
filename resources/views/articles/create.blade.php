@@ -16,7 +16,7 @@
                 @include('articles.form')
                 <!-- <input id="image" type="file" name="image" > -->
                 <div class="form-group">
-                  <label for="inputFile">写真</label>
+                  <label for="inputFile"></label>
                 <div class="custom-file">
                   <input type="file" class="custom-file-input" id="inputFile">
                   <label class="custom-file-label" for="inputFile" data-browse="参照">写真を選択</label>
